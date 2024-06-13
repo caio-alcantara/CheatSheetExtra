@@ -1,0 +1,46 @@
+{
+  "name": "it-man-app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/connect-redis": "^6.1.3",
+    "@sailshq/lodash": "^3.10.6",
+    "@sailshq/socket.io-redis": "^6.1.2",
+    "assert": "^2.1.0",
+    "chai": "^5.1.1",
+    "grunt": "1.0.4",
+    "mocha": "^10.4.0",
+    "nyc": "^17.0.0",
+    "sails": "^1.5.10",
+    "sails-hook-grunt": "^5.0.0",
+    "sails-hook-orm": "^4.0.3",
+    "sails-hook-sockets": "^3.0.0",
+    "sails-postgresql": "^5.0.1",
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "test-unit": "nyc node ./node_modules/mocha/bin/mocha tests/lifecycle.test.js tests/unit/**/*.test.js",
+    "test-integration": "nyc node ./node_modules/mocha/bin/mocha tests/integration/**/*.test.js",
+    "coverage": "nyc --reporter=html --reporter=text npm test",
+    "tests-coverage": "npm run coverage && start coverage/index.html",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/it-man-app.git"
+  },
+  "author": "anonymous node/sails user",
+  "license": "",
+  "engines": {
+    "node": "^20.9"
+  }
+}

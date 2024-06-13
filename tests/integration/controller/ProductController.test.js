@@ -1,12 +1,3 @@
-# CheatSheetExtra
-
-A ideia aqui é realmente funcionar como uma colinha para mim! 
-
-Testes de integração -> testes de rotas/endpoints -> utiliza do supertest
-
-exemplo de teste de endpoint:
-
-```javascript
 /* eslint-disable prefer-arrow-callback */
 const Sails = require('sails');
 const supertest = require('supertest');
@@ -120,5 +111,3 @@ describe('ProductController', function () {
       });
   });
 });
-
-```
